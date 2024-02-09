@@ -1,0 +1,165 @@
+[0m17:31:04.099192 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1075c7350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107989410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107989fd0>]}
+
+
+============================== 17:31:04.101813 | f1fca184-7115-4d5a-bdae-fa48e1c6c7b0 ==============================
+[0m17:31:04.101813 [info ] [MainThread]: Running with dbt=1.7.4
+[0m17:31:04.102142 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '../', 'log_path': 'models/silver/logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt run --target silver --profiles-dir ../ --project-dir ./models/silver --target-path ../../.cleanup --full-refresh', 'target_path': '../../.cleanup', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m17:31:04.734900 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f1fca184-7115-4d5a-bdae-fa48e1c6c7b0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11fb74690>]}
+[0m17:31:04.776500 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f1fca184-7115-4d5a-bdae-fa48e1c6c7b0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11fb403d0>]}
+[0m17:31:04.777146 [info ] [MainThread]: Registered adapter: bigquery=1.7.2
+[0m17:31:04.789186 [debug] [MainThread]: checksum: 4485b524cb4d9211adc7cd83cc75c7f39d75630a2150d3c4d4750b83b15509e3, vars: {}, profile: , target: silver, version: 1.7.4
+[0m17:31:04.853292 [info ] [MainThread]: Unable to do partial parsing because config vars, config profile, or config target have changed
+[0m17:31:04.853654 [debug] [MainThread]: previous checksum: 4485b524cb4d9211adc7cd83cc75c7f39d75630a2150d3c4d4750b83b15509e3, current checksum: cac6c4946143967e4d1737bc63125eeb680e459a59d7a0b7772fc3105bc84a2f
+[0m17:31:04.853827 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m17:31:04.854010 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'f1fca184-7115-4d5a-bdae-fa48e1c6c7b0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12c337f50>]}
+[0m17:31:05.360860 [warn ] [MainThread]: The configured adapter does not support metadata-based freshness. A loaded_at_field must be specified for source 'staging_us'.
+[0m17:31:05.379221 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f1fca184-7115-4d5a-bdae-fa48e1c6c7b0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12c2e2650>]}
+[0m17:31:05.384546 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f1fca184-7115-4d5a-bdae-fa48e1c6c7b0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x15412e910>]}
+[0m17:31:05.384800 [info ] [MainThread]: Found 3 models, 3 sources, 0 exposures, 0 metrics, 462 macros, 0 groups, 0 semantic models
+[0m17:31:05.384987 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f1fca184-7115-4d5a-bdae-fa48e1c6c7b0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12c1b7c50>]}
+[0m17:31:05.385854 [info ] [MainThread]: 
+[0m17:31:05.386268 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m17:31:05.386893 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dvp-np-sandbox-b8d0'
+[0m17:31:05.387116 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:31:10.210076 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dvp-np-sandbox-b8d0, now list_dvp-np-sandbox-b8d0_silver_us)
+[0m17:31:10.212395 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:31:11.966138 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f1fca184-7115-4d5a-bdae-fa48e1c6c7b0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1540bb350>]}
+[0m17:31:11.968802 [info ] [MainThread]: Concurrency: 2 threads (target='silver')
+[0m17:31:11.969774 [info ] [MainThread]: 
+[0m17:31:11.980466 [debug] [Thread-1 (]: Began running node model.seeder_project_tmpl.academic_graduation_rate
+[0m17:31:11.981292 [debug] [Thread-2 (]: Began running node model.seeder_project_tmpl.academic_indicators_ela
+[0m17:31:11.986154 [info ] [Thread-2 (]: 2 of 3 START sql incremental model silver_us.academic_indicators_ela ........... [RUN]
+[0m17:31:11.988546 [debug] [Thread-2 (]: Acquiring new bigquery connection 'model.seeder_project_tmpl.academic_indicators_ela'
+[0m17:31:11.991846 [debug] [Thread-2 (]: Began compiling node model.seeder_project_tmpl.academic_indicators_ela
+[0m17:31:11.995193 [info ] [Thread-1 (]: 1 of 3 START sql incremental model silver_us.academic_graduation_rate .......... [RUN]
+[0m17:31:12.006925 [debug] [Thread-2 (]: Writing injected SQL for node "model.seeder_project_tmpl.academic_indicators_ela"
+[0m17:31:12.007895 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dvp-np-sandbox-b8d0_silver_us, now model.seeder_project_tmpl.academic_graduation_rate)
+[0m17:31:12.008256 [debug] [Thread-1 (]: Began compiling node model.seeder_project_tmpl.academic_graduation_rate
+[0m17:31:12.010348 [debug] [Thread-1 (]: Writing injected SQL for node "model.seeder_project_tmpl.academic_graduation_rate"
+[0m17:31:12.010977 [debug] [Thread-2 (]: Timing info for model.seeder_project_tmpl.academic_indicators_ela (compile): 17:31:11.995767 => 17:31:12.010817
+[0m17:31:12.011238 [debug] [Thread-1 (]: Timing info for model.seeder_project_tmpl.academic_graduation_rate (compile): 17:31:12.008402 => 17:31:12.011122
+[0m17:31:12.011894 [debug] [Thread-2 (]: Began executing node model.seeder_project_tmpl.academic_indicators_ela
+[0m17:31:12.012324 [debug] [Thread-1 (]: Began executing node model.seeder_project_tmpl.academic_graduation_rate
+[0m17:31:12.046779 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m17:31:12.048697 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:31:14.304286 [debug] [Thread-2 (]: Writing runtime sql for node "model.seeder_project_tmpl.academic_indicators_ela"
+[0m17:31:14.305914 [debug] [Thread-2 (]: On model.seeder_project_tmpl.academic_indicators_ela: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "dvp", "target_name": "silver", "node_id": "model.seeder_project_tmpl.academic_indicators_ela"} */
+
+  
+    
+
+    create or replace table `dvp-np-sandbox-b8d0`.`silver_us`.`academic_indicators_ela`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      WITH transform AS (
+  SELECT
+    *,
+    SAFE_CAST(LEFT(SAFE_CAST(cds AS STRING), 2) AS INT64) AS county_code,
+    SAFE_CAST(SUBSTR(SAFE_CAST(cds AS STRING), 3, 5) AS INT64) AS district_code,
+    SAFE_CAST(RIGHT(SAFE_CAST(cds AS STRING), 7) AS INT64) AS school_code, 
+    CONCAT(cds, reportingyear, studentgroup) AS tertiary_key
+  FROM
+    `dvp-np-sandbox-b8d0`.`staging_us`.`academic_indicators_ela`
+)
+
+SELECT
+  ABS(
+    farm_fingerprint(safe_cast(TO_JSON_STRING(transform) AS STRING))
+  ) AS surrogate_key,
+  transform.*
+FROM
+  transform
+    );
+  
+[0m17:31:14.942731 [debug] [Thread-1 (]: Hard refreshing `dvp-np-sandbox-b8d0`.`silver_us`.`academic_graduation_rate` because it is not replaceable
+[0m17:31:15.388795 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dvp-np-sandbox-b8d0&j=bq:US:e6242ddd-cbcc-4320-8c48-2b1158781237&page=queryresults
+[0m17:31:15.684904 [debug] [Thread-1 (]: Writing runtime sql for node "model.seeder_project_tmpl.academic_graduation_rate"
+[0m17:31:15.688018 [debug] [Thread-1 (]: On model.seeder_project_tmpl.academic_graduation_rate: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "dvp", "target_name": "silver", "node_id": "model.seeder_project_tmpl.academic_graduation_rate"} */
+
+  
+    
+
+    create or replace table `dvp-np-sandbox-b8d0`.`silver_us`.`academic_graduation_rate`
+      
+    
+    cluster by aggregatelevel
+
+    OPTIONS()
+    as (
+      SELECT
+    ABS(
+    farm_fingerprint(safe_cast(TO_JSON_STRING(agr) AS STRING))
+  ) AS surrogate_key,
+    agr.*
+FROM
+    `dvp-np-sandbox-b8d0`.`staging_us`.`academic_graduation_rate` AS agr
+    );
+  
+[0m17:31:16.513920 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dvp-np-sandbox-b8d0&j=bq:US:bc7a774f-a699-4250-81b9-197480aba5b2&page=queryresults
+[0m17:31:22.040587 [debug] [Thread-1 (]: Timing info for model.seeder_project_tmpl.academic_graduation_rate (execute): 17:31:12.036943 => 17:31:22.040246
+[0m17:31:22.041944 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f1fca184-7115-4d5a-bdae-fa48e1c6c7b0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12c267bd0>]}
+[0m17:31:22.042825 [info ] [Thread-1 (]: 1 of 3 OK created sql incremental model silver_us.academic_graduation_rate ..... [[32mCREATE TABLE (114.0k rows, 22.0 MiB processed)[0m in 10.03s]
+[0m17:31:22.043616 [debug] [Thread-1 (]: Finished running node model.seeder_project_tmpl.academic_graduation_rate
+[0m17:31:22.044187 [debug] [Thread-1 (]: Began running node model.seeder_project_tmpl.assessments_sbac
+[0m17:31:22.044933 [info ] [Thread-1 (]: 3 of 3 START sql incremental model silver_us.assessments_sbac .................. [RUN]
+[0m17:31:22.045953 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.seeder_project_tmpl.academic_graduation_rate, now model.seeder_project_tmpl.assessments_sbac)
+[0m17:31:22.046396 [debug] [Thread-1 (]: Began compiling node model.seeder_project_tmpl.assessments_sbac
+[0m17:31:22.051172 [debug] [Thread-1 (]: Writing injected SQL for node "model.seeder_project_tmpl.assessments_sbac"
+[0m17:31:22.052613 [debug] [Thread-1 (]: Timing info for model.seeder_project_tmpl.assessments_sbac (compile): 17:31:22.046650 => 17:31:22.052322
+[0m17:31:22.053072 [debug] [Thread-1 (]: Began executing node model.seeder_project_tmpl.assessments_sbac
+[0m17:31:22.056897 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:31:22.143926 [debug] [Thread-2 (]: Timing info for model.seeder_project_tmpl.academic_indicators_ela (execute): 17:31:12.012555 => 17:31:22.143587
+[0m17:31:22.145256 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f1fca184-7115-4d5a-bdae-fa48e1c6c7b0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1541eb6d0>]}
+[0m17:31:22.146051 [info ] [Thread-2 (]: 2 of 3 OK created sql incremental model silver_us.academic_indicators_ela ...... [[32mCREATE TABLE (169.4k rows, 32.6 MiB processed)[0m in 10.16s]
+[0m17:31:22.146791 [debug] [Thread-2 (]: Finished running node model.seeder_project_tmpl.academic_indicators_ela
+[0m17:31:23.958967 [debug] [Thread-1 (]: Writing runtime sql for node "model.seeder_project_tmpl.assessments_sbac"
+[0m17:31:23.961686 [debug] [Thread-1 (]: On model.seeder_project_tmpl.assessments_sbac: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "dvp", "target_name": "silver", "node_id": "model.seeder_project_tmpl.assessments_sbac"} */
+
+  
+    
+
+    create or replace table `dvp-np-sandbox-b8d0`.`silver_us`.`assessments_sbac`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      WITH raw_assessments AS (
+SELECT
+    *
+FROM
+    `dvp-np-sandbox-b8d0`.`staging_us`.`assessments_sbac`
+)
+
+SELECT 
+   ABS(
+    farm_fingerprint(safe_cast(TO_JSON_STRING(raw_assessments) AS STRING))
+  ) AS surrogate_key,
+   *
+FROM raw_assessments
+    );
+  
+[0m17:31:24.656424 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dvp-np-sandbox-b8d0&j=bq:US:e29c173d-1afb-448a-a77e-2cadee4d64cd&page=queryresults
+[0m17:31:36.039978 [debug] [Thread-1 (]: Timing info for model.seeder_project_tmpl.assessments_sbac (execute): 17:31:22.053332 => 17:31:36.039441
+[0m17:31:36.042600 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f1fca184-7115-4d5a-bdae-fa48e1c6c7b0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12c372390>]}
+[0m17:31:36.043902 [info ] [Thread-1 (]: 3 of 3 OK created sql incremental model silver_us.assessments_sbac ............. [[32mCREATE TABLE (4.1m rows, 678.7 MiB processed)[0m in 14.00s]
+[0m17:31:36.045973 [debug] [Thread-1 (]: Finished running node model.seeder_project_tmpl.assessments_sbac
+[0m17:31:36.051040 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:31:36.055388 [debug] [MainThread]: Connection 'model.seeder_project_tmpl.assessments_sbac' was properly closed.
+[0m17:31:36.056252 [debug] [MainThread]: Connection 'model.seeder_project_tmpl.academic_indicators_ela' was properly closed.
+[0m17:31:36.057109 [info ] [MainThread]: 
+[0m17:31:36.058248 [info ] [MainThread]: Finished running 3 incremental models in 0 hours 0 minutes and 30.67 seconds (30.67s).
+[0m17:31:36.059907 [debug] [MainThread]: Command end result
+[0m17:31:36.075300 [info ] [MainThread]: 
+[0m17:31:36.076207 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m17:31:36.076887 [info ] [MainThread]: 
+[0m17:31:36.077405 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+[0m17:31:36.078143 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 32.01113, "process_user_time": 3.965875, "process_kernel_time": 0.82456, "process_mem_max_rss": "229933056", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m17:31:36.078901 [debug] [MainThread]: Command `dbt run` succeeded at 17:31:36.078720 after 32.01 seconds
+[0m17:31:36.079452 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1075c7350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1075520d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107220550>]}
+[0m17:31:36.079959 [debug] [MainThread]: Flushing usage events

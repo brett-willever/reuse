@@ -1,0 +1,18 @@
+version: 1.0.0
+name: seeder_project_tmpl
+config-version: 2.0
+profile: dvp
+model-paths:
+- ./
+test-paths:
+- tests
+seed-paths:
+- seeds
+macro-paths:
+- ../../macros
+snapshot-paths:
+- snapshots
+clean-targets:
+- target
+- dbt_packages
+- logs

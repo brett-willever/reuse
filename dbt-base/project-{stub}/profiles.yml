@@ -1,0 +1,35 @@
+_: &_
+  type: bigquery
+  method: oauth
+  priority: interactive
+  location: US
+  project: '{{env_var("BIGQUERY_PROJECT_ID")}}'
+
+dvp:
+  target: raw
+  outputs:
+    raw:
+      <<: *_
+      dataset: raw_us
+      threads: 1
+      timeout_seconds: 500
+    staging:
+      <<: *_
+      dataset: staging_us
+      threads: 4
+      timeout_seconds: 500
+    silver:
+      <<: *_
+      dataset: silver_us
+      threads: 2
+      timeout_seconds: 500
+    gold:
+      <<: *_
+      dataset: gold_us
+      threads: 2
+      timeout_seconds: 500
+    platinum:
+      <<: *_
+      dataset: platinum_us
+      threads: 1
+      timeout_seconds: 60
